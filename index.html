@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快眠ポートフォリオ | 睡眠投資家けい</title>
+    <!-- Tailwind CSSの読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome (アイコン用) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deep: '#0f172a', 
+                        card: '#1e293b', 
+                        accent: '#818cf8', 
+                        gold: '#fbbf24', 
+                    },
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Arial', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', 'Meiryo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            /* 夜空をイメージした微かなグラデーション背景 */
+            background-image: radial-gradient(circle at top, #1e1b4b 0%, #0f172a 50%);
+            background-attachment: fixed;
+        }
+        /* カードのホバーアニメーション */
+        .item-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .item-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(129, 140, 248, 0.1), 0 4px 6px -2px rgba(129, 140, 248, 0.05);
+        }
+        /* Amazonボタンの目立つグラデーション */
+        .btn-amazon {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-amazon:hover {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            transform: scale(1.02);
+        }
+        /* ふわっと表示されるアニメーション */
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-sans">
+
+    <!-- ヘッダー / プロフィールセクション -->
+    <header class="max-w-2xl mx-auto w-full px-4 pt-12 pb-8 text-center fade-in">
+        <div class="relative inline-block">
+            <!-- プロフィールアイコン -->
+            <div class="w-24 h-24 rounded-full bg-slate-700 mx-auto flex items-center justify-center border-2 border-accent shadow-[0_0_15px_rgba(129,140,248,0.3)] overflow-hidden">
+                <img src="1059.png" alt="Profile" class="w-full h-full object-cover">
+            </div>
+            <!-- 月マークの装飾バッジ -->
+            <div class="absolute -bottom-2 -right-2 bg-slate-800 rounded-full p-1.5 shadow-lg flex items-center justify-center w-8 h-8 border border-slate-700">
+                <i class="fa-solid fa-moon text-accent"></i>
+            </div>
+        </div>
+        
+        <h1 class="mt-4 text-2xl font-bold tracking-wider">睡眠投資家けい<br><span class="text-sm font-normal text-slate-400">@kei_sleep_hack</span></h1>
+        <p class="mt-3 text-slate-300 text-sm leading-relaxed max-w-md mx-auto">
+            睡眠の質は、人生の質。<br>
+            科学的アプローチと自身の検証から辿り着いた、<br>
+            本当に価値のあるアイテムだけを厳選しました。
+        </p>
+
+        <div class="mt-10 mb-2">
+            <h2 class="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400 inline-block border-b border-accent/30 pb-2">
+                私の人生を激変させた<br class="md:hidden">「快眠ポートフォリオ」
+            </h2>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ / アフィリエイトリンク 5枠 -->
+    <main class="max-w-2xl mx-auto w-full px-4 flex-grow space-y-5 pb-16">
+        
+        <!-- アイテム 1 -->
+        <article class="item-card bg-card rounded-2xl p-4 sm:p-5 border border-slate-700/50 flex flex-col sm:flex-row gap-4 fade-in delay-1">
+            <!-- 商品画像エリア -->
+            <div class="w-full sm:w-1/3 aspect-video sm:aspect-square bg-slate-800 rounded-xl flex-shrink-0 flex items-center justify-center relative overflow-hidden group">
+                <img src="https://placehold.co/400x400/1e293b/818cf8?text=Item+1" alt="" class="w-full h-full object-cover p-2">
+            </div>
+            <!-- テキスト＆ボタンエリア -->
+            <div class="flex flex-col justify-between flex-grow">
+                <div>
+                    <h3 class="font-bold text-lg text-white leading-tight mb-1">【小林製薬 ナイトミン 耳ほぐタイム】</h3>
+                    <p class="text-xs text-accent mb-2 font-medium">★★★☆☆ | 脳がとろける</p>
+                    <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+                        「耳を温める」だけで、脳がとろける。<br>
+                        耳栓としての遮音性と、ホッカイロのような温熱効果で眠りの世界に完全没入。<br>
+                        自律神経が整い、強制的に「リラックスモード」へ移行できます。
+                    </p>
+                </div>
+                <!-- Amazonアソシエイトリンク -->
+                <a href="https://amzn.to/4cqpF0B" target="_blank" rel="noopener" class="btn-amazon text-white font-bold text-sm text-center py-3 rounded-xl shadow-lg w-full flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-amazon text-lg"></i> Amazonで詳細を見る
+                </a>
+            </div>
+        </article>
+
+        <!-- アイテム 2 -->
+        <article class="item-card bg-card rounded-2xl p-4 sm:p-5 border border-slate-700/50 flex flex-col sm:flex-row gap-4 fade-in delay-2">
+            <div class="w-full sm:w-1/3 aspect-video sm:aspect-square bg-slate-800 rounded-xl flex-shrink-0 flex items-center justify-center relative overflow-hidden group">
+                <img src="https://placehold.co/400x400/1e293b/818cf8?text=Item+2" alt="" class="w-full h-full object-cover p-2">
+            </div>
+            <div class="flex flex-col justify-between flex-grow">
+                <div>
+                    <h3 class="font-bold text-lg text-white leading-tight mb-1">【ハウスウェルネスフーズ ネルノダ 粒タイプ】</h3>
+                    <p class="text-xs text-accent mb-2 font-medium">★★★★☆ | 熟睡感爆上がり</p>
+                    <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+                        「泥のように眠る」を、毎晩の当たり前に。<br>
+                        GABAの力で、熟睡感が爆上がり。<br>飲むと翌朝の「目覚めのキレ」が明らかに違います。<br>
+                        ここぞという時だけでなく、日々のベースアップに。
+                    </p>
+                </div>
+                <!-- Amazonアソシエイトリンク -->
+                <a href="https://amzn.to/4aiYulC" target="_blank" rel="noopener" class="btn-amazon text-white font-bold text-sm text-center py-3 rounded-xl shadow-lg w-full flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-amazon text-lg"></i> Amazonで詳細を見る
+                </a>
+            </div>
+        </article>
+
+        <!-- アイテム 3 -->
+        <article class="item-card bg-card rounded-2xl p-4 sm:p-5 border border-slate-700/50 flex flex-col sm:flex-row gap-4 fade-in delay-3">
+            <div class="w-full sm:w-1/3 aspect-video sm:aspect-square bg-slate-800 rounded-xl flex-shrink-0 flex items-center justify-center relative overflow-hidden group">
+                <img src="https://placehold.co/400x400/1e293b/818cf8?text=Item+3" alt="" class="w-full h-full object-cover p-2">
+            </div>
+            <div class="flex flex-col justify-between flex-grow">
+                <div>
+                    <h3 class="font-bold text-lg text-white leading-tight mb-1">【AOKI 疲労回復ウェア リカバリーケアプラス】</h3>
+                    <p class="text-xs text-accent mb-2 font-medium">★★★★★ | パジャマは医療機器</p>
+                    <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+                        「パジャマは医療機器」という新常識。<br>
+                        あのスーツのAOKIが本気で作った、血行促進ウェア。ロゴすらない極めてシンプルなデザインで、男女問わず着られます。<br>
+                        着て寝るだけで、翌日の疲労感が明らかに軽減されます。
+                    </p>
+                </div>
+                <!-- Amazonアソシエイトリンク -->
+                <a href="https://amzn.to/3ZRtcOh" target="_blank" rel="noopener" class="btn-amazon text-white font-bold text-sm text-center py-3 rounded-xl shadow-lg w-full flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-amazon text-lg"></i> Amazonで詳細を見る
+                </a>
+            </div>
+        </article>
+
+        <!-- アイテム 4 -->
+        <article class="item-card bg-card rounded-2xl p-4 sm:p-5 border border-slate-700/50 flex flex-col sm:flex-row gap-4 fade-in delay-4">
+            <div class="w-full sm:w-1/3 aspect-video sm:aspect-square bg-slate-800 rounded-xl flex-shrink-0 flex items-center justify-center relative overflow-hidden group">
+                <img src="https://placehold.co/400x400/1e293b/818cf8?text=Item+4" alt="" class="w-full h-full object-cover p-2">
+            </div>
+            <div class="flex flex-col justify-between flex-grow">
+                <div>
+                    <h3 class="font-bold text-lg text-white leading-tight mb-1">【BRAIN SLEEP ブレインスリープ ピロー】</h3>
+                    <p class="text-xs text-accent mb-2 font-medium">★★★★★ | 脳の冷却装置</p>
+                    <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+                        脳を冷やして、速攻で「深部体温」を下げる枕。<br>
+                        抜群の通気性で、睡眠の敵である「頭の熱」を瞬時に放出。<br>入眠直後から一番深い眠りに入れる、まさに脳の冷却装置です。
+                    </p>
+                </div>
+                <!-- Amazonアソシエイトリンク -->
+                <a href="https://amzn.to/4rGI4up" target="_blank" rel="noopener" class="btn-amazon text-white font-bold text-sm text-center py-3 rounded-xl shadow-lg w-full flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-amazon text-lg"></i> Amazonで詳細を見る
+                </a>
+            </div>
+        </article>
+
+        <!-- アイテム 5 -->
+        <article class="item-card bg-card rounded-2xl p-4 sm:p-5 border border-slate-700/50 flex flex-col sm:flex-row gap-4 fade-in delay-5">
+            <div class="w-full sm:w-1/3 aspect-video sm:aspect-square bg-slate-800 rounded-xl flex-shrink-0 flex items-center justify-center relative overflow-hidden group">
+                <img src="https://placehold.co/400x400/1e293b/818cf8?text=Item+5" alt="" class="w-full h-full object-cover p-2">
+            </div>
+            <div class="flex flex-col justify-between flex-grow">
+                <div>
+                    <h3 class="font-bold text-lg text-white leading-tight mb-1">【koala オリジナルコアラマットレス シングル】</h3>
+                    <p class="text-xs text-accent mb-2 font-medium">★★★★★ | 振動ストレス皆無</p>
+                    <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+                        「隣で誰が動こうとも、私の眠りは揺るがない」。<br>
+                        ワイングラスも倒れない振動吸収性が凄まじく、妻が起きても気づかないレベル。<br>寝返りの振動ストレスが皆無になり、「朝まで一度も目が覚めない」完走体験が手に入ります。
+                    </p>
+                </div>
+                <!-- Amazonアソシエイトリンク -->
+                <a href="https://amzn.to/3ZtoXIq" target="_blank" rel="noopener" class="btn-amazon text-white font-bold text-sm text-center py-3 rounded-xl shadow-lg w-full flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-amazon text-lg"></i> Amazonで詳細を見る
+                </a>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- フッター（制約事項） -->
+    <footer class="mt-auto py-8 text-center text-xs text-slate-400 border-t border-slate-800 bg-slate-900/80">
+        <div class="max-w-2xl mx-auto px-4">
+            <p class="mb-2">※商品の価格や詳細はAmazonのページにてご確認ください。</p>
+            <p class="font-medium text-slate-300">このサイトはAmazonアソシエイトプログラムに参加しています。</p>
+            <p class="mt-5 text-slate-600">&copy; 2026 睡眠投資家けい. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
